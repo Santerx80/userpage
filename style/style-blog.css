@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Junge&family=Righteous&family=Ubuntu:wght@300;700&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Junge';
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/land.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* S Nab Bar */
+
+.header {
+  background-color: #00000028;
+  background-position: center top;
+  /* background-color: #000000; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 70px;
+  padding: 5px 10%;
+  position: relative;
+}
+
+
+.header .logo {
+cursor: pointer;
+margin-right: auto;
+}
+
+.header .logo {
+color: var(--color-white);
+width: auto;
+transition: all 0.3s;
+}
+
+.header .logo a {
+color: rgb(255, 255, 255);
+}
+
+.header .logo:hover {
+transform: scale(1.2);
+}
+
+.header .nav-links {
+list-style: none;
+}
+
+.header .nav-links li {
+display: inline-block;
+padding: 0 20px;
+}
+
+.header .nav-links li:hover,
+.overlay a:hover {
+transform: scale(1.1);
+}
+
+.header .nav-links a {
+font-size: 700;
+color: rgb(255, 255, 255);
+}
+
+.header .nav-links li a:hover {
+color: var(--color-blue);
+}
+
+.menu {
+display: none;
+}
+
+.header .btn button,
+.header .menu button {
+margin-left: 20px;
+font-weight: 700;
+color: #1b3039;
+padding: 9px 25px;
+background: var(--color-white);
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+}
+
+
+.header .btn button:hover,
+.header .menu button:hover {
+background-color: #e2f1f8;
+color: var(--color-blue);
+transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+
+.nav-links,
+.btn {
+  display: none;
+}
+
+.menu {
+  display: inherit;
+}
+}
+
+/* Nav */
+
+.header a {
+text-decoration: none;
+}
+
+.header .overlay {
+height: 100%;
+width: 0%;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+background-color: rgba(33, 49, 63, .95);
+overflow: hidden;
+transition: all 0.3s;
+}
+
+.header .overlay .overlay-content {
+display: flex;
+height: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.header .overlay a {
+padding: 15px;
+font-size: 36px;
+display: block;
+transition: all 0.3s ease 0s;
+font-weight: 700;
+color: var(--color-white);
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+color: #ffbc0e;
+}
+
+.header .overlay .close {
+position: absolute;
+top: 20px;
+right: 45px;
+font-size: 65px;
+}
+
+@media screen and (max-height: 450px) {
+.header .overlay a {
+  font-size: 20px;
+}
+
+.header .overlay .close {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+}
+}
+
+/* E Nab Bar */
+
+/* SECCION BLOG */
+.blog {
+  padding: 20px;
+  color: #fff;
+}
+
+.blog h2 {
+  font-family: 'Junge';
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+.blog h3 {
+  font-family: 'Junge';
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+/*DIV DE SEPARACION DE BLOG Y CONTENIDO*/
+.blog .proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centra horizontalmente */
+  text-align: justify;
+  margin: 0px 0px;
+}
+
+/*DIV COMPLETO DE IMAGEN + TEXTO + BOTON */
+.blog .proyectos .proyecto {
+  position: relative;
+  max-width: 350px;
+  height: fit-content;
+  margin: 20px 100px;
+}
+
+/* DIV DE IMAGEN */
+.blog .proyectos .proyecto .imagen img {
+  width: 350px;
+  height: 200px;
+  display: block;
+  transition: 0.5s;
+  /* Efecto de imagen */
+  object-fit: cover;
+  /* Imagen no se distorcione*/
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 767px) {
+  .blog .proyectos .proyecto {
+    max-width: 100%;
+    margin: 20px 0;
+    /* Puedes ajustar el margen según tus necesidades */
+  }
+
+  .blog .proyectos .proyecto .imagen img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* DIV DE IMAGEN CUANDO EL CURSOR ESTE ENCIMA */
+.imagen img:hover {
+  transform: scale(1.2);
+}
+
+/*DIV DE BOTON [a]*/
+.proyecto a {
+  background-color: transparent;
+  border: 2px solid #fff;
+  display: block;
+  margin: 20px 110px;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 767px) {
+  .proyecto a {
+    margin: 20px 0;
+    /* Ajusta el margen según tus necesidades */
+  }
+}
+
+/*DIV DEL EFECTO EN EL BOTON [a]*/
+.proyecto a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1CB698;
+  border-radius: 7px;
+  z-index: -1;
+  transition: 1s;
+}
+
+/*DIV CUANDO EL CURSOR ESTE ENCIMA DEL BOTON [a]*/
+.proyecto a:hover .overlay {
+  width: 100%;
+}
+
+
+
+/* ----------------SECCION DE NOTICIAS---------------*/
+/*DIV DEL FONDO DE LA NOTICIA 1*/
+.noticias {
+  background-image: url(Imagenes/Fondo2.jpeg);
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+/*DIV TITULO PAGINA*/
+.noticias h1 {
+  font-family: 'Junge';
+  text-align: center;
+  font-size: 40px;
+}
+
+/*DIV DODNE VA LA IMAGEN*/
+.noticias .contenido-noticias .imagen-noticia {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+/*DIV DE LA IMAGEN*/
+.noticias .contenido-noticias .imagen-noticia img {
+  border-radius: 20px;
+  width: 700px;
+  height: 400px;
+  padding: 10px;
+}
+
+/*DIV TITULO DEL TEXTO*/
+.noticias .contenido-noticias h2 {
+  font-family: 'Junge';
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+/*DIV DEL TEXTO*/
+.noticias .contenido-noticias .texto-noticia {
+  width: 1000px;
+  margin: 10px auto;
+  padding: 10px 10px;
+  text-align: justify;
+}
+
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 767px) {
+  .noticias .contenido-noticias .imagen-noticia {
+    width: 100%;
+    margin: 0;
+  }
+
+  .noticias .contenido-noticias .imagen-noticia img {
+    width: 100%;
+    height: auto;
+  }
+
+  .noticias .contenido-noticias .texto-noticia {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
